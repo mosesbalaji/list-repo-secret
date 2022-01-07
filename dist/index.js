@@ -4389,14 +4389,16 @@ const fs = __nccwpck_require__(147)
   , json2csv = __nccwpck_require__(192)
 ;
 
-async function run() {
-  const token = getRequiredInput('token')
-    , organizationinp = getRequiredInput('organization')
-  ;
-
-  console.log(organizationinp);
-
+async function main() {
+    try {
+        const token = getRequiredInput('token')
+        const organizationinp = getRequiredInput('organization')
+        console.log(organizationinp);
+    }catch (error) {
+        core.setFailed(error.message)
+    }
 }
+
 })();
 
 module.exports = __webpack_exports__;
