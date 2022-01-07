@@ -4389,8 +4389,8 @@ const fs = __nccwpck_require__(147)
   , json2csv = __nccwpck_require__(192)
 ;
 
-const organizationinp = getRequiredInput('organization');
-const my_token = getRequiredInput('token');
+const organizationinp = getInput('organization');
+const my_token = getInput('token');
 
 console.log(organizationinp)
 
