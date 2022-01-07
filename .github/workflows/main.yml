@@ -1,0 +1,31 @@
+name: Inactive Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      action_branch:
+        description: The branch of the action to use
+        default: main
+        
+      organization:
+        description: The organization to process
+        default: internal-test-organization
+        
+jobs:
+  orgs:
+    name: Analyze Organization
+    
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Action
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.inputs.action_branch }}
+        
+      - name: Analyze organization
+        id: analyze_org
+        uses: ./
+        with:
+          token: ${{ secrets.OCTODEMO_TEMP_TOKEN }}
+          organization: ${{ github.event.inputs.organization }}
