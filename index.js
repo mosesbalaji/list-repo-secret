@@ -12,3 +12,4 @@ async function run() {
     console.log(organizationinp)
     core.setOutput('usercount', organizationinp);
 }
+run();
