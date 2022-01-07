@@ -31,4 +31,4 @@ jobs:
           organization: ${{ github.event.inputs.organization }}
       - name: Results
         run: |
-          echo "Inactive user list for last ${{ github.event.outputs.organizationinp }} days"
+          echo "Inactive user list for last ${{ github.event.outputs.usercount }} days"
