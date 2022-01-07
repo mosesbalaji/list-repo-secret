@@ -1,0 +1,16 @@
+name: GitHub Organization User Activity
+description: A summary of user activity for an organization
+author: ManiKandan
+
+inputs:
+  token:
+    description: GitHub Access Token.
+    required: true
+
+  organization:
+    description: The organization name.
+    required: true
+
+runs:
+  using: node12
+  main: dist/index.js
