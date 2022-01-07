@@ -5,7 +5,11 @@ const fs = require('fs')
   , json2csv = require('json2csv')
 ;
 
-const organizationinp = getInput('organization');
-const my_token = getInput('token');
+async function run() {
+  const token = getRequiredInput('token')
+    , organizationinp = getRequiredInput('organization')
+  ;
 
-console.log(organizationinp)
+  console.log(organizationinp);
+
+}
