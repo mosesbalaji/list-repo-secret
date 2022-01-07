@@ -4390,11 +4390,7 @@ const fs = __nccwpck_require__(147)
 ;
 
 async function run() {
-    const token = getRequiredInput('token')
-      , organizationinp = getRequiredInput('organization')
-    ;
-    console.log(organizationinp)
-    core.setOutput('usercount', organizationinp);
+   console.log('hello, world!')
 }
 run();
 })();

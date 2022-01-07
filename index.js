@@ -6,10 +6,6 @@ const fs = require('fs')
 ;
 
 async function run() {
-    const token = getRequiredInput('token')
-      , organizationinp = getRequiredInput('organization')
-    ;
-    console.log(organizationinp)
-    core.setOutput('usercount', organizationinp);
+   console.log('hello, world!')
 }
 run();
